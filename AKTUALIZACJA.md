@@ -118,8 +118,8 @@ crontab -e
 SHELL=/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin:/home/vibe/.local/bin
 
-# 1. i 15. dnia miesiąca o 6:00
-0 6 1,15 * * cd /srv/rejestry-ursus && vibe -p "$(cat PROMPT-aktualizacja.txt)" --auto-approve --trust --max-turns 40 --max-price 2 >> /var/log/rejestry-ursus.log 2>&1
+# 5. i 20. dnia miesiąca o 6:00
+0 6 5,20 * * cd /srv/rejestry-ursus && vibe -p "$(cat PROMPT-aktualizacja.txt)" --auto-approve --trust --max-turns 40 --max-price 2 >> /var/log/rejestry-ursus.log 2>&1
 ```
 
 Dlaczego te flagi:
@@ -151,7 +151,7 @@ prościej zostawić `--auto-approve` i pilnować konta.
 Dobre, gdy trzymasz sesję Vibe w `tmux`/`screen` na serwerze. Wpisz w sesji:
 
 ```
-/loop 0 6 1,15 * * Odśwież wykazy Ursus: uruchom ./update.sh, sprawdź liczbę pozycji w build.log, zacommituj i wypchnij na GitHub. Zakończ zwięzłym raportem po polsku.
+/loop 0 6 5,20 * * Odśwież wykazy Ursus: uruchom ./update.sh, sprawdź liczbę pozycji w build.log, zacommituj i wypchnij na GitHub. Zakończ zwięzłym raportem po polsku.
 ```
 
 Ograniczenie: pętla działa **tylko gdy sesja jest otwarta i bezczynna**.

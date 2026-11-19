@@ -5,12 +5,13 @@ name: Aktualizacja wykazów
 # Przy "Deploy from a branch" GitHub publikuje README przez Jekylla,
 # a kroki configure-pages / deploy-pages kończą się błędem.
 #
-# Uruchamiane 1. i 15. dnia miesiąca o 06:00 UTC.
+# Uruchamiane 5. i 20. dnia miesiąca o 06:00 UTC (zgodnie z lokalnym daemonem
+# ursus_daemon.py na Windows — patrz AKTUALIZACJA.md, wariant D).
 # Rejestr prowadzony przez Urząd jest uzupełniany z opóźnieniem, dlatego
 # dwa przebiegi w miesiącu dają świeże dane bez codziennego szumu w historii.
 on:
   schedule:
-    - cron: '0 6 1,15 * *'
+    - cron: '0 6 5,20 * *'
   workflow_dispatch:        # ręczne uruchomienie z zakładki Actions
   push:
     branches: [main]
