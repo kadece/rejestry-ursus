@@ -308,19 +308,18 @@ Adres po pierwszym udanym deployu: **https://kadece.github.io/rejestry-ursus/**
 ### Potwierdzony stan rzeczy (2026-11-19)
 
 Workflow na runnerze GitHuba **nie pobiera świeżych danych**. Przebieg
-`44532159890` zakończył się komunikatem:
+`44532448993` zapisał do `build.log`:
 
 ```
-[2019]
-  znaleziono 0 załączników na stronie
-  ! brak danych — rocznik pominięty
-...
-Brak danych — przerywam.
+=== DIAGNOSTYKA ŹRÓDŁA ===
+status=403 type=text/html size=3205 ip=34.248.138.138
+--- pierwsze 400 znaków odpowiedzi ---
+<title>Strona nie może zostać wyświetlona - Portal Informacyjny Urzędu m.st. Warszawy</title>
 ```
 
-Strona źródłowa odpowiada runnerowi, ale bez listy załączników — najprawdopodobniej
-WAF/CDN blokuje adresy z centrów danych. Krok „Diagnostyka pobierania” zapisuje do
-`build.log` status HTTP i pierwsze 400 znaków odpowiedzi, żeby to potwierdzić.
+Czyli: **HTTP 403**. Serwer dzielnicy blokuje adresy z centrów danych (ten
+runner wyszedł z AWS `eu-west-1`). To nie jest zmiana układu strony ani błąd
+parsera — z domowego/ biurowego IP te same adresy zwracają 200.
 
 Skutek: workflow działa jako **deploy**, nie jako **fetch**. Publikuje
 `site/index.html` przebudowany z `data/*.json` zapisanych w repozytorium
