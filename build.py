@@ -643,8 +643,8 @@ def render(bundle):
     css = read(os.path.join(TPL, 'style.css'))
     js = read(os.path.join(TPL, 'app.js'))
 
-    # osadzone fonty (base64 w data URI) doklejamy przed stylem —
-    # strona zostaje jednym plikiem, bez CDN.
+    # osadzone fonty (base64 w data URI, templates/fonts.css) doklejamy przed
+    # stylem — strona zostaje jednym plikiem, bez CDN. Regeneracja: fetch-fonts.ps1
     fonts_css = os.path.join(TPL, 'fonts.css')
     if os.path.exists(fonts_css):
         css = read(fonts_css) + '\n' + css
