@@ -48,6 +48,27 @@ jobs:
           set -o pipefail
           python build.py --all 2>&1 | tee build.log
 
+      - name: Diagnostyka pobierania
+        # Zapisuje do build.log to, co runner faktycznie dostaje ze źródła.
+        # Pozwala odróżnić „WAF blokuje adresy centrów danych” od „zmienił się
+        # układ strony”. Bez tego w logu widać tylko „0 załączników”.
+        if: steps.fetch.outcome == 'failure'
+        continue-on-error: true
+        run: |
+          {
+            echo ""
+            echo "=== DIAGNOSTYKA ŹRÓDŁA ==="
+            curl -sS -o /dev/null \
+              -w 'status=%{http_code} type=%{content_type} size=%{size_download} ip=%{remote_ip}\n' \
+              -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' \
+              https://ursus.um.warszawa.pl/wykazy-za-rok-2026 || echo "curl nie powiódł się"
+            echo "--- pierwsze 400 znaków odpowiedzi ---"
+            curl -sS -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' \
+              https://ursus.um.warszawa.pl/wykazy-za-rok-2026 2>/dev/null | head -c 400 || true
+            echo ""
+            echo "=== KONIEC DIAGNOSTYKI ==="
+          } | tee -a build.log
+
       - name: Renderuj z danych w repozytorium
         if: steps.fetch.outcome == 'failure'
         run: |

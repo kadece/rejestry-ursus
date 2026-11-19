@@ -295,7 +295,9 @@ rejestry-ursus/
 
 ## 10. Publikacja na GitHub Pages
 
-Jednorazowa konfiguracja (nie da się jej zrobić z agenta — wymaga kliknięcia):
+Jednorazowa konfiguracja — **wymaga jednego kliknięcia w przeglądarce**, nie da
+się jej zrobić z agenta ani z workflow (sprawdzone: `GITHUB_TOKEN` dostaje
+`Resource not accessible by integration` przy próbie utworzenia strony Pages):
 
 1. https://github.com/kadece/rejestry-ursus/settings/pages
 2. **Source**: `GitHub Actions` (nie „Deploy from a branch”)
@@ -303,8 +305,28 @@ Jednorazowa konfiguracja (nie da się jej zrobić z agenta — wymaga kliknięci
 
 Adres po pierwszym udanym deployu: **https://kadece.github.io/rejestry-ursus/**
 
-Workflow `.github/workflows/update.yml` robi to samo co `update.sh`, tylko na
-runnerze GitHuba i z commitem z powrotem do repo. Jeśli runner nie ma dostępu do
-`ursus.um.warszawa.pl`, workflow przechodzi w tryb `--render-only` i publikuje
-stronę z ostatnich danych — dlatego warto trzymać `update.sh` na własnym serwerze
-jako główne źródło świeżych danych.
+### Potwierdzony stan rzeczy (2026-11-19)
+
+Workflow na runnerze GitHuba **nie pobiera świeżych danych**. Przebieg
+`44532159890` zakończył się komunikatem:
+
+```
+[2019]
+  znaleziono 0 załączników na stronie
+  ! brak danych — rocznik pominięty
+...
+Brak danych — przerywam.
+```
+
+Strona źródłowa odpowiada runnerowi, ale bez listy załączników — najprawdopodobniej
+WAF/CDN blokuje adresy z centrów danych. Krok „Diagnostyka pobierania” zapisuje do
+`build.log` status HTTP i pierwsze 400 znaków odpowiedzi, żeby to potwierdzić.
+
+Skutek: workflow działa jako **deploy**, nie jako **fetch**. Publikuje
+`site/index.html` przebudowany z `data/*.json` zapisanych w repozytorium
+(tryb `--render-only`). To jest poprawne zachowanie — strona nigdy nie zostaje
+zepsuta — ale dane się nie odświeżają.
+
+**Dlatego `update.sh` na własnym serwerze jest głównym źródłem świeżych danych.**
+Serwer pobiera dane, commituje i wypycha; workflow publikuje to, co przyjdzie.
+
