@@ -609,6 +609,33 @@ def read(path):
         return f.read()
 
 
+def wrap_json(s):
+    """Wstawia znak nowej linii po każdym `}` i `]` poza literałem tekstowym.
+
+    Bez tego cała paczka danych (ponad 1 MB) ląduje w jednej linii pliku HTML:
+    git nie potrafi wtedy pokazać sensownego diffu, a narzędzia czytające plik
+    po liniach gubią zawartość. Nowe linie są wewnątrz JSON-a, więc dla
+    przeglądarki nic się nie zmienia.
+    """
+    out = []
+    in_str = False
+    esc = False
+    for ch in s:
+        out.append(ch)
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == '\\':
+                esc = True
+            elif ch == '"':
+                in_str = False
+        elif ch == '"':
+            in_str = True
+        elif ch in '}]':
+            out.append('\n')
+    return ''.join(out)
+
+
 def render(bundle):
     os.makedirs(SITE, exist_ok=True)
 
@@ -632,6 +659,7 @@ def render(bundle):
 
     payload = json.dumps(bundle, ensure_ascii=False, separators=(',', ':'))
     payload = payload.replace('</', '<\\/')
+    payload = wrap_json(payload)
 
     years = bundle['years']
     default = bundle['default']
