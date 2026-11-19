@@ -643,6 +643,12 @@ def render(bundle):
     css = read(os.path.join(TPL, 'style.css'))
     js = read(os.path.join(TPL, 'app.js'))
 
+    # osadzone fonty (base64 w data URI) doklejamy przed stylem —
+    # strona zostaje jednym plikiem, bez CDN.
+    fonts_css = os.path.join(TPL, 'fonts.css')
+    if os.path.exists(fonts_css):
+        css = read(fonts_css) + '\n' + css
+
     # logo wklejamy jako data URI — strona zostaje jednym plikiem.
     # Źródłem jest PNG; jeśli go nie ma (np. w repozytorium, gdzie pliki
     # binarne idą przez kanał tekstowy), bierzemy zapis base64 z .b64.

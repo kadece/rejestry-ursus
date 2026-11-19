@@ -166,8 +166,8 @@
         } else {
           var a = 0.08 + 0.62 * (n / maxCell);
           html += '<td class="cell" data-goto="' + mm + '" data-reg="' + reg.id +
-            '" style="background:rgba(200,16,46,' + a.toFixed(3) + ');color:' +
-            (a > 0.42 ? '#fff' : '#7a1024') + '" title="' + esc(reg.name) + ' — ' +
+            '" style="background:rgba(18,150,75,' + a.toFixed(3) + ');color:' +
+            (a > 0.42 ? '#ffffff' : '#0c6e38') + '" title="' + esc(reg.name) + ' — ' +
             MONTHS[mm - 1] + ': ' + n + '">' + n + '</td>';
         }
       }
@@ -175,7 +175,7 @@
         var n0 = rowsFor(reg.id, 0).length;
         html += n0 === 0 ? '<td class="zero">·</td>'
           : '<td class="cell" data-goto="0" data-reg="' + reg.id +
-            '" style="background:#eef2f7;color:#64748b" title="bez daty: ' + n0 + '">' + n0 + '</td>';
+            '" style="background:#eef3f0;color:#6f7a74" title="bez daty: ' + n0 + '">' + n0 + '</td>';
       }
       html += '<td class="total">' + totals.byReg[reg.id] + '</td></tr>';
     });
