@@ -1,0 +1,70 @@
+name: Aktualizacja wykazów
+
+# Uruchamiane 1. i 15. dnia miesiąca o 06:00 UTC.
+# Rejestr prowadzony przez Urząd jest uzupełniany z opóźnieniem, dlatego
+# dwa przebiegi w miesiącu dają świeże dane bez codziennego szumu w historii.
+on:
+  schedule:
+    - cron: '0 6 1,15 * *'
+  workflow_dispatch:        # ręczne uruchomienie z zakładki Actions
+  push:
+    branches: [main]
+    paths:
+      - 'build.py'
+      - 'templates/**'
+      - '.github/workflows/update.yml'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Zależności
+        # pdfplumber jest potrzebny dla roczników 2019–2020 (urząd publikował
+        # wtedy wyłącznie PDF-y). Dla nowszych lat wystarcza openpyxl.
+        run: python -m pip install --quiet openpyxl pdfplumber
+
+      - name: Pobierz dane i zbuduj stronę
+        run: python build.py --all
+
+      - name: Zapisz zmiany w repozytorium
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data site
+          if git diff --staged --quiet; then
+            echo "Brak zmian — dane bez modyfikacji."
+          else
+            git commit -m "Aktualizacja wykazów $(date +%Y-%m-%d)"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

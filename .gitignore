@@ -1,0 +1,9 @@
+logs/
+shots/
+__pycache__/
+*.pyc
+
+# Pliki źródłowe pobierane z ursus.um.warszawa.pl — ~9 MB binariów,
+# które i tak są pobierane od nowa przy każdym buildzie. Adresy źródeł
+# są zapisane w data/wykazy-*.json (pole "url"), więc nic nie ginie.
+raw/

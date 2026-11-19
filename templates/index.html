@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<meta name="description" content="__DESCRIPTION__">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="__TITLE__">
+<meta property="og:description" content="__DESCRIPTION__">
+<meta property="og:type" content="website">
+<style>
+__STYLE__
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Dzielnica Ursus &middot; m.st. Warszawa</p>
+    <div class="hero-head">
+      <h1>Wykazy i rejestry <span class="year">__YEARS__</span></h1>
+      <a class="brand" href="https://zielonyursus.pl/" target="_blank" rel="noopener"
+         title="Bezpieczny i Zielony Ursus">
+        <img src="__LOGO__" alt="Bezpieczny i Zielony Ursus" width="212" height="192">
+      </a>
+    </div>
+    <p class="lede">
+      Decyzje i wnioski z zakresu zagospodarowania przestrzennego oraz procesu
+      budowlanego &mdash; zebrane w jednym miejscu i uporządkowane miesiącami.
+    </p>
+    <nav class="years" id="years" role="tablist" aria-label="Wybór rocznika"></nav>
+    <div class="meta">
+      <span>Źródło: <a href="__SOURCE__" target="_blank" rel="noopener">ursus.um.warszawa.pl</a></span>
+      <span>Pozycji: <b>__COUNT__</b></span>
+      <span>Aktualizacja: <b>__UPDATED__</b></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Wybór miesiąca"></nav>
+
+    <div class="toolbar">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+        <input id="q" type="search" placeholder="Szukaj: ulica, wnioskodawca, numer sprawy…"
+               aria-label="Szukaj w wykazach" autocomplete="off">
+      </div>
+      <div class="spacer"></div>
+      <button class="btn" onclick="window.print()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M6 9V3h12v6M6 18H4v-6h16v6h-2M8 14h8v7H8z"></path>
+        </svg>
+        Drukuj
+      </button>
+    </div>
+
+    <div id="view" aria-live="polite"></div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      Dane pochodzą z oficjalnych rejestrów publikowanych przez
+      <a href="__SOURCE__" target="_blank" rel="noopener">Urząd Dzielnicy Ursus m.st. Warszawy</a>.
+      Strona ma charakter informacyjny &mdash; wiążące pozostają dokumenty źródłowe.
+    </p>
+    <p>Ostatnie pobranie danych: __UPDATED__ &middot; wygenerowano automatycznie.</p>
+  </div>
+</footer>
+
+<script type="application/json" id="wykazy-data">__DATA__</script>
+<script>
+__SCRIPT__
+</script>
+</body>
+</html>

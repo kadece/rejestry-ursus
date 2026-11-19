@@ -1,0 +1,100 @@
+<!--
+  ============================================================================
+  Wykazy Ursus — snippet do osadzenia na WordPressie
+  ============================================================================
+  Pełna instrukcja (trzy warianty, FTP, GitHub Pages, shortcode):
+      WORDPRESS.md
+
+  Wklej ten kod w blok „Własny HTML” (Custom HTML) na stronie lub we wpisie,
+  albo w widget HTML w Elementorze.
+
+  Podmień ADRES na miejsce, w którym leży wygenerowany plik index.html, np.:
+      https://twojadomena.pl/wykazy/index.html
+      https://twoj-login.github.io/wykazy-ursus/index.html
+
+  Parametr ?embed=1 ukrywa duży nagłówek — na stronie WordPressa masz
+  własny tytuł, więc nie dublujemy go w ramce. Przełącznik roczników
+  (2019 … 2026) zostaje widoczny także w trybie embed, podobnie jak
+  logo BiZU w prawym górnym rogu.
+
+  Plik waży ~1,1 MB (osiem roczników, 4558 pozycji). Włącz gzip/brotli
+  na serwerze — schodzi wtedy do ~250 kB.
+  ============================================================================
+-->
+
+<div class="wykazy-ursus-embed">
+  <iframe
+    id="wykazyUrsusFrame"
+    src="https://twojadomena.pl/wykazy/index.html?embed=1"
+    title="Wykazy i rejestry — Dzielnica Ursus"
+    loading="lazy"
+    style="width:100%; height:1400px; border:0; display:block; border-radius:16px; background:#f4f6f9;"
+  ></iframe>
+</div>
+
+<script>
+(function () {
+  var frame = document.getElementById('wykazyUrsusFrame');
+  if (!frame) return;
+
+  // Ramka sama zgłasza swoją wysokość — dzięki temu nie ma wewnętrznego
+  // paska przewijania i strona wygląda jak natywna treść.
+  window.addEventListener('message', function (e) {
+    if (!e.data || e.data.type !== 'wykazy-ursus-height') return;
+    var h = parseInt(e.data.height, 10);
+    if (h > 200) frame.style.height = h + 'px';
+  });
+})();
+</script>
+
+<!--
+  ============================================================================
+  Wariant B — bez iframe, treść wklejona bezpośrednio w stronę
+  ============================================================================
+  Zamiast ramki możesz wkleić całą zawartość pliku site/index.html
+  (od <style> do </script>) w blok „Własny HTML”.
+
+  Zalety:  treść jest częścią strony, indeksuje się w Google.
+  Wady:    ~1,1 MB w jednym bloku (osiem roczników), edytor WordPressa
+           może się zacinać, a po każdej aktualizacji trzeba wkleić plik
+           od nowa. Przy tej objętości polecamy wariant A.
+
+  ============================================================================
+  Wariant C — natywny shortcode (dla chętnych)
+  ============================================================================
+  Wgraj plik data/wykazy-2026.json do wp-content/uploads/wykazy/ i użyj
+  wtyczki typu „Code Snippets” z takim kodem:
+
+      add_shortcode('wykazy_ursus', function ($atts) {
+          $a = shortcode_atts(['rok' => date('Y')], $atts);
+          $path = WP_CONTENT_DIR . '/uploads/wykazy/wykazy-' . (int) $a['rok'] . '.json';
+          if (!file_exists($path)) return '<p>Brak danych.</p>';
+          $d = json_decode(file_get_contents($path), true);
+          ob_start(); ?>
+          <div class="wykazy-ursus">
+            <?php foreach ($d['registers'] as $reg): ?>
+              <h3><?php echo esc_html($reg['name']); ?></h3>
+              <table class="wp-block-table">
+                <thead><tr><th>Data</th>
+                  <?php foreach ($reg['cols'] as $c): ?>
+                    <th><?php echo esc_html($c['l']); ?></th>
+                  <?php endforeach; ?>
+                </tr></thead>
+                <tbody>
+                <?php foreach ($reg['rows'] as $row): ?>
+                  <tr>
+                    <td><?php echo esc_html($row['d']); ?></td>
+                    <?php foreach ($reg['cols'] as $c): ?>
+                      <td><?php echo esc_html($row['c'][$c['k']] ?? ''); ?></td>
+                    <?php endforeach; ?>
+                  </tr>
+                <?php endforeach; ?>
+                </tbody>
+              </table>
+            <?php endforeach; ?>
+          </div>
+          <?php return ob_get_clean();
+      });
+
+  Wtedy w treści piszesz:  [wykazy_ursus rok="2026"]
+-->
