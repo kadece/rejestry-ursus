@@ -172,6 +172,24 @@ Register-ScheduledTask -TaskName 'Rejestry Ursus' -Action $action -Trigger $trig
 (`-Weekly` co tydzień; dla „co dwa tygodnie” dodaj drugi trigger z przesunięciem
 albo użyj `-DaysInterval 14` w `New-ScheduledTaskTrigger -Once`.)
 
+### Wariant D — daemon lokalny na Windows: 5. i 20. dnia miesiąca (aktywny setup)
+
+Na komputerze Krzysztofa działa lokalny klon w `C:\rejestry-ursus` z daemonem
+`ursus_daemon.py`, który **5. i 20. każdego miesiąca o 06:00** uzupełnia rejestry
+o nowe dane z bieżącego roku i publikuje zmiany na GitHubie:
+
+- `ursus_daemon.py` — pętla demona: terminy w `daemon-state.json` (kolejny przebieg
+  liczony jako najbliższy z dni 5/20 o 06:00), log `daemon.log`, logi przebiegów
+  w `runs-daemon/`, lock `.ursus-daemon.lock` (pojedyncza instancja).
+  Przy przebiegu uruchamia `vibe -p` z `PROMPT-daemon.txt`
+  (`--auto-approve --trust --workdir C:\rejestry-ursus`), czyli build + kontrola
+  jakości + publikacja przez connector GitHub (`push_files`) — bez git CLI.
+- `register-daemon-task.ps1` — rejestracja na Windows: dwa zadania w Harmonogramie
+  (`Rejestry-Ursus-Daemon-dzien5`, `Rejestry-Ursus-Daemon-dzien20`, MONTHLY o 06:00)
+  oraz autostart przy logowaniu przez `rejestry-ursus-daemon.bat` w folderze Startup.
+- Komendy ręczne: `python ursus_daemon.py status` / `run-now` / `test` (dry-run,
+  bez publikacji) / `next 2026-12-05T06:00`.
+
 ---
 
 ## 6. Gotowy prompt

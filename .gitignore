@@ -7,3 +7,11 @@ __pycache__/
 # które i tak są pobierane od nowa przy każdym buildzie. Adresy źródeł
 # są zapisane w data/wykazy-*.json (pole "url"), więc nic nie ginie.
 raw/
+
+# Stan lokalnego daemona Windows (ursus_daemon.py) — tylko lokalnie
+daemon.log
+daemon-state.json
+runs-daemon/
+.ursus-daemon.lock
+build-test.log
+daemon-task.xml
