@@ -2,7 +2,8 @@ Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
 --------------------------------------------------------------
 
 [2019]
-  znaleziono 0 załączników na stronie
+  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
+  -> korzystam z plików w raw/
   - pominięto dec_wz (brak pliku)
   - pominięto dec_pnb (brak pliku)
   - pominięto dec_lcp (brak pliku)
@@ -15,7 +16,8 @@ Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
   ! brak danych — rocznik pominięty
 
 [2020]
-  znaleziono 0 załączników na stronie
+  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
+  -> korzystam z plików w raw/
   - pominięto dec_wz (brak pliku)
   - pominięto dec_pnb (brak pliku)
   - pominięto dec_lcp (brak pliku)
@@ -28,7 +30,8 @@ Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
   ! brak danych — rocznik pominięty
 
 [2021]
-  znaleziono 0 załączników na stronie
+  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
+  -> korzystam z plików w raw/
   - pominięto dec_wz (brak pliku)
   - pominięto dec_pnb (brak pliku)
   - pominięto dec_lcp (brak pliku)
@@ -41,7 +44,8 @@ Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
   ! brak danych — rocznik pominięty
 
 [2022]
-  znaleziono 0 załączników na stronie
+  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
+  -> korzystam z plików w raw/
   - pominięto dec_wz (brak pliku)
   - pominięto dec_pnb (brak pliku)
   - pominięto dec_lcp (brak pliku)
@@ -54,7 +58,8 @@ Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
   ! brak danych — rocznik pominięty
 
 [2023]
-  znaleziono 0 załączników na stronie
+  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
+  -> korzystam z plików w raw/
   - pominięto dec_wz (brak pliku)
   - pominięto dec_pnb (brak pliku)
   - pominięto dec_lcp (brak pliku)
@@ -67,7 +72,8 @@ Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
   ! brak danych — rocznik pominięty
 
 [2024]
-  znaleziono 0 załączników na stronie
+  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
+  -> korzystam z plików w raw/
   - pominięto dec_wz (brak pliku)
   - pominięto dec_pnb (brak pliku)
   - pominięto dec_lcp (brak pliku)
@@ -80,7 +86,8 @@ Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
   ! brak danych — rocznik pominięty
 
 [2025]
-  znaleziono 0 załączników na stronie
+  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
+  -> korzystam z plików w raw/
   - pominięto dec_wz (brak pliku)
   - pominięto dec_pnb (brak pliku)
   - pominięto dec_lcp (brak pliku)
@@ -93,7 +100,8 @@ Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
   ! brak danych — rocznik pominięty
 
 [2026]
-  znaleziono 0 załączników na stronie
+  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
+  -> korzystam z plików w raw/
   - pominięto dec_wz (brak pliku)
   - pominięto dec_pnb (brak pliku)
   - pominięto dec_lcp (brak pliku)
@@ -108,9 +116,24 @@ Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
 Brak danych — przerywam.
 
 === DIAGNOSTYKA ŹRÓDŁA ===
-status=202 type=text/html; charset=UTF-8 size=0 ip=34.248.138.138
+status=403 type=text/html size=3205 ip=34.248.138.138
 --- pierwsze 400 znaków odpowiedzi ---
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Strona nie może zostać wyświetlona - Portal Informacyjny Urzędu m.st. Warszawy</title>
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        min-height: 100%;
+    }
 === KONIEC DIAGNOSTYKI ===
 Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
 --------------------------------------------------------------
