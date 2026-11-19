@@ -67,6 +67,10 @@ jobs:
           fi
 
       - uses: actions/configure-pages@v5
+        with:
+          # Włącza GitHub Pages, jeśli nie są jeszcze włączone — dzięki temu
+          # pierwszy przebieg nie wymaga ręcznego kliknięcia w Settings → Pages.
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
