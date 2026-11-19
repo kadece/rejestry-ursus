@@ -1,5 +1,10 @@
 name: Aktualizacja wykazów
 
+# UWAGA — wymagane ustawienie po stronie GitHuba:
+#   Settings → Pages → Source = "GitHub Actions"
+# Przy "Deploy from a branch" GitHub publikuje README przez Jekylla,
+# a kroki configure-pages / deploy-pages kończą się błędem.
+#
 # Uruchamiane 1. i 15. dnia miesiąca o 06:00 UTC.
 # Rejestr prowadzony przez Urząd jest uzupełniany z opóźnieniem, dlatego
 # dwa przebiegi w miesiącu dają świeże dane bez codziennego szumu w historii.
