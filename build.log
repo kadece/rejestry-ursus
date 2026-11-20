@@ -2,148 +2,175 @@ Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
 --------------------------------------------------------------
 
 [2019]
-  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
-  -> korzystam z plików w raw/
-  - pominięto dec_wz (brak pliku)
-  - pominięto dec_pnb (brak pliku)
+  znaleziono 7 załączników na stronie
+  + rejestr_dec_wz_2019.pdf                         589113 B
+    -> 122 pozycji (1 bez daty)
+  + rejestr_decyzji_o_pozw_na_bud__2019.pdf         630297 B
+    -> 180 pozycji
   - pominięto dec_lcp (brak pliku)
   - pominięto dec_zrid (brak pliku)
-  - pominięto wn_wz (brak pliku)
-  - pominięto wn_pnb (brak pliku)
-  - pominięto wn_lcp (brak pliku)
-  - pominięto zgl (brak pliku)
-  - pominięto umowy16 (brak pliku)
-  ! brak danych — rocznik pominięty
+  + rejestr_wnioskow_o_wz_2019.pdf                  514045 B
+    -> 112 pozycji
+  + rejestr_wnioskow_o_pozw_na_bud_2019.pdf         114646 B
+    -> 151 pozycji (4 bez daty)
+  + rejestr_wnioskow_lcp_2019.pdf                   486796 B
+    ! zły dokument w źródle: 'rejestr zgloszen' zamiast 'rejestr wnioskow lcp' — pomijam
+  - pominięto wn_lcp (brak pozycji)
+  + rejestr_zgloszen_2019.pdf                       486796 B
+    -> 189 pozycji (2 bez daty)
+  + rejestr_umowyart16_2019.pdf                     230638 B
+    ->  12 pozycji
+  -> data\wykazy-2019.json
+  razem: 766 pozycji w 6 rejestrach
 
 [2020]
-  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
-  -> korzystam z plików w raw/
-  - pominięto dec_wz (brak pliku)
-  - pominięto dec_pnb (brak pliku)
+  znaleziono 7 załączników na stronie
+  + rejestr_dec_wz_2020.pdf                         321537 B
+    ->  76 pozycji
+  + rejestr_decyzji_o_pozw_na_bud__2020.pdf         642851 B
+    -> 154 pozycji (2 bez daty)
   - pominięto dec_lcp (brak pliku)
   - pominięto dec_zrid (brak pliku)
-  - pominięto wn_wz (brak pliku)
-  - pominięto wn_pnb (brak pliku)
-  - pominięto wn_lcp (brak pliku)
-  - pominięto zgl (brak pliku)
-  - pominięto umowy16 (brak pliku)
-  ! brak danych — rocznik pominięty
+  + rejestr_wnioskow_o_wz_2020.pdf                  613937 B
+    ->  65 pozycji (1 bez daty)
+  + rejestr_wnioskow_o_pozw_na_bud_2020.pdf         769616 B
+    -> 137 pozycji
+  + rejestr_wnioskow_lcp_2020.pdf                   361920 B
+    ->  37 pozycji (3 bez daty)
+  + rejestr_zgloszen_2020.pdf                       684109 B
+    -> 136 pozycji
+  + rejestr_umowyart16_2020.pdf                     232845 B
+    ->   9 pozycji
+  -> data\wykazy-2020.json
+  razem: 614 pozycji w 7 rejestrach
 
 [2021]
-  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
-  -> korzystam z plików w raw/
-  - pominięto dec_wz (brak pliku)
-  - pominięto dec_pnb (brak pliku)
+  znaleziono 7 załączników na stronie
+  + rejestr_dec_wz_2021+(1).xlsx                     21751 B
+    ->  67 pozycji (1 bez daty)
+  + rejestr_decyzji_o_pozw_na_bud_+2021.xlsx         27335 B
+    -> 112 pozycji (2 bez daty)
   - pominięto dec_lcp (brak pliku)
   - pominięto dec_zrid (brak pliku)
-  - pominięto wn_wz (brak pliku)
-  - pominięto wn_pnb (brak pliku)
-  - pominięto wn_lcp (brak pliku)
-  - pominięto zgl (brak pliku)
-  - pominięto umowy16 (brak pliku)
-  ! brak danych — rocznik pominięty
+  + rejestr_wnioskow_o_wz_2021.xlsx                  20657 B
+    ->  92 pozycji
+  + rejestr_wnioskow_o_pozw_na+bud_2021.xlsx         23150 B
+    -> 101 pozycji (1 bez daty)
+  + rejestr_wnioskow_lcp_2021+(1).xlsx               16076 B
+    ->  27 pozycji
+  + rejestr_zgloszen_2021.xlsx                       31232 B
+    -> 136 pozycji (2 bez daty)
+  + rejestr_umowyart16_2021.pdf                     220792 B
+    ->   1 pozycji
+  -> data\wykazy-2021.json
+  razem: 536 pozycji w 7 rejestrach
 
 [2022]
-  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
-  -> korzystam z plików w raw/
-  - pominięto dec_wz (brak pliku)
-  - pominięto dec_pnb (brak pliku)
+  znaleziono 7 załączników na stronie
+  + rejestr_dec_wz_2022.xlsx                         26455 B
+    ->  96 pozycji
+  + rejestr_decyzji_o_pozw_na_bud_+2022.xlsx         28215 B
+    -> 106 pozycji (1 bez daty)
   - pominięto dec_lcp (brak pliku)
   - pominięto dec_zrid (brak pliku)
-  - pominięto wn_wz (brak pliku)
-  - pominięto wn_pnb (brak pliku)
-  - pominięto wn_lcp (brak pliku)
-  - pominięto zgl (brak pliku)
-  - pominięto umowy16 (brak pliku)
-  ! brak danych — rocznik pominięty
+  + rejestr_wnioskow_o_wz_2022.xlsx                  20978 B
+    ->  97 pozycji
+  + rejestr_wnioskow_o_pozw_na+bud_2022.xlsx         23782 B
+    -> 100 pozycji
+  + rejestr_wnioskow_lcp_2022.xlsx                   17151 B
+    ->  35 pozycji
+  + rejestr_zgloszen_2022.xlsx                       30335 B
+    -> 133 pozycji (2 bez daty)
+  + 29.04.2022_Wykaz+umów+z+art.+16.xlsx             14768 B
+    ->  44 pozycji
+  -> data\wykazy-2022.json
+  razem: 611 pozycji w 7 rejestrach
 
 [2023]
-  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
-  -> korzystam z plików w raw/
-  - pominięto dec_wz (brak pliku)
-  - pominięto dec_pnb (brak pliku)
+  znaleziono 6 załączników na stronie
+  + rejestr_dec_wz_2023.xlsx                         28654 B
+    -> 110 pozycji
+  + rejestr_decyzji_o_pozw_na_bud_+2023.xlsx         28100 B
+    ->  97 pozycji (1 bez daty)
   - pominięto dec_lcp (brak pliku)
   - pominięto dec_zrid (brak pliku)
-  - pominięto wn_wz (brak pliku)
-  - pominięto wn_pnb (brak pliku)
-  - pominięto wn_lcp (brak pliku)
-  - pominięto zgl (brak pliku)
+  + rejestr_wnioskow_o_wz_2023.xlsx                  21645 B
+    ->  94 pozycji
+  + rejestr_wnioskow_o_pozw_na+bud_2023.xlsx         24387 B
+    ->  90 pozycji
+  + rejestr_wnioskow_lcp_2023.xlsx                   17260 B
+    ->  27 pozycji
+  + rejestr_zgloszen_2023.xlsx                       31951 B
+    -> 145 pozycji
   - pominięto umowy16 (brak pliku)
-  ! brak danych — rocznik pominięty
+  -> data\wykazy-2023.json
+  razem: 563 pozycji w 6 rejestrach
 
 [2024]
-  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
-  -> korzystam z plików w raw/
-  - pominięto dec_wz (brak pliku)
-  - pominięto dec_pnb (brak pliku)
+  znaleziono 6 załączników na stronie
+  + rejestr_dec_wz_2024.xlsx                         22614 B
+    ->  34 pozycji
+  + rejestr_decyzji_o_pozw_na_bud_+2024.xlsx         27778 B
+    ->  87 pozycji (1 bez daty)
   - pominięto dec_lcp (brak pliku)
   - pominięto dec_zrid (brak pliku)
-  - pominięto wn_wz (brak pliku)
-  - pominięto wn_pnb (brak pliku)
-  - pominięto wn_lcp (brak pliku)
-  - pominięto zgl (brak pliku)
+  + rejestr_wnioskow_o_wz_2024.xlsx                  21180 B
+    ->  68 pozycji
+  + rejestr_wnioskow_o_pozw_na+bud_2024.xlsx         25225 B
+    ->  96 pozycji (1 bez daty)
+  + rejestr_wnioskow_lcp_2024.xlsx                   16910 B
+    ->  22 pozycji
+  + rejestr_zgloszen_2024.xlsx                       32191 B
+    -> 142 pozycji
   - pominięto umowy16 (brak pliku)
-  ! brak danych — rocznik pominięty
+  -> data\wykazy-2024.json
+  razem: 449 pozycji w 6 rejestrach
 
 [2025]
-  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
-  -> korzystam z plików w raw/
-  - pominięto dec_wz (brak pliku)
-  - pominięto dec_pnb (brak pliku)
-  - pominięto dec_lcp (brak pliku)
+  znaleziono 7 załączników na stronie
+  + rejestr_dec_wz_2025.xlsx                         28724 B
+    -> 111 pozycji (6 bez daty)
+  + rejestr_decyzji_o_pozw_na_bud_+2025.xlsx         29565 B
+    ->  81 pozycji (7 bez daty)
+  + rejestr_decyzji_lcp+2025.xlsx                    20460 B
+    ->  13 pozycji
   - pominięto dec_zrid (brak pliku)
-  - pominięto wn_wz (brak pliku)
-  - pominięto wn_pnb (brak pliku)
-  - pominięto wn_lcp (brak pliku)
-  - pominięto zgl (brak pliku)
+  + rejestr_wnioskow_o_wz_2025.xlsx                  24234 B
+    -> 109 pozycji
+  + rejestr_wnioskow_o_pozw_na+bud_2025.xlsx         25077 B
+    ->  99 pozycji
+  + rejestr_wnioskow_lcp_2025.xlsx                   16553 B
+    ->  10 pozycji
+  + rejestr_zgloszen_2025.xlsx                       30800 B
+    -> 126 pozycji
   - pominięto umowy16 (brak pliku)
-  ! brak danych — rocznik pominięty
+  -> data\wykazy-2025.json
+  razem: 549 pozycji w 7 rejestrach
 
 [2026]
-  ! nie udało się pobrać strony: HTTP Error 403: Forbidden
-  -> korzystam z plików w raw/
-  - pominięto dec_wz (brak pliku)
-  - pominięto dec_pnb (brak pliku)
-  - pominięto dec_lcp (brak pliku)
-  - pominięto dec_zrid (brak pliku)
-  - pominięto wn_wz (brak pliku)
-  - pominięto wn_pnb (brak pliku)
-  - pominięto wn_lcp (brak pliku)
-  - pominięto zgl (brak pliku)
+  znaleziono 8 załączników na stronie
+  + rejestr_dec_wz_2026.xlsx                         26145 B
+    ->  78 pozycji (1 bez daty)
+  + rejestr_decyzji_o_pozw_na_bud_+2026.xlsx         30562 B
+    ->  94 pozycji (1 bez daty)
+  + rejestr_decyzji_lcp+2026.xlsx                    19107 B
+    ->  11 pozycji
+  + rejestr_decyzji_zrid+2026.xlsx                   18097 B
+    ->   3 pozycji
+  + rejestr_wnioskow_o_wz_2026.xlsx                  23222 B
+    ->  92 pozycji
+  + rejestr_wnioskow_o_pozw_na+bud_2026.xlsx         23390 B
+    ->  80 pozycji
+  + rejestr_wnioskow_lcp_2026.xlsx                   16522 B
+    ->  11 pozycji
+  + rejestr_zgloszen_2026.xlsx                       25970 B
+    -> 101 pozycji
   - pominięto umowy16 (brak pliku)
-  ! brak danych — rocznik pominięty
+  -> data\wykazy-2026.json
+  razem: 470 pozycji w 8 rejestrach
 
-Brak danych — przerywam.
+  -> data\index.json
 
-=== DIAGNOSTYKA ŹRÓDŁA ===
-status=403 type=text/html size=3205 ip=34.248.138.138
---- pierwsze 400 znaków odpowiedzi ---
-<!DOCTYPE html>
-<html lang="en">
+  RAZEM: 4558 pozycji w 8 rocznikach
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Strona nie może zostać wyświetlona - Portal Informacyjny Urzędu m.st. Warszawy</title>
-  <style>
-    * {
-        box-sizing: border-box;
-    }
-
-    html {
-        min-height: 100%;
-    }
-=== KONIEC DIAGNOSTYKI ===
-Wykazy Ursus — roczniki: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
---------------------------------------------------------------
-  2019: 766 pozycji
-  2020: 614 pozycji
-  2021: 536 pozycji
-  2022: 611 pozycji
-  2023: 563 pozycji
-  2024: 449 pozycji
-  2025: 549 pozycji
-  2026: 470 pozycji
-
-  -> site/index.html  (1219 kB)
+  -> site\index.html  (1239 kB)
