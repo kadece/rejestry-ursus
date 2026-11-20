@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-20T12:09:53+01:00",
+ "generated": "2026-11-20T18:12:25+01:00",
  "default": 2026,
  "years": [
   {
    "year": 2019,
    "total": 766,
    "registers": 6,
-   "generated": "2026-11-20T12:09:13+01:00",
+   "generated": "2026-11-20T18:11:46+01:00",
    "source": "https://ursus.um.warszawa.pl/wykazy-za-rok-2019",
    "file": "wykazy-2019.json"
   },
@@ -14,7 +14,7 @@
    "year": 2020,
    "total": 614,
    "registers": 7,
-   "generated": "2026-11-20T12:09:34+01:00",
+   "generated": "2026-11-20T18:12:05+01:00",
    "source": "https://ursus.um.warszawa.pl/wykazy-za-rok-2020",
    "file": "wykazy-2020.json"
   },
@@ -22,7 +22,7 @@
    "year": 2021,
    "total": 536,
    "registers": 7,
-   "generated": "2026-11-20T12:09:37+01:00",
+   "generated": "2026-11-20T18:12:08+01:00",
    "source": "https://ursus.um.warszawa.pl/wykazy-za-rok-2021",
    "file": "wykazy-2021.json"
   },
@@ -30,7 +30,7 @@
    "year": 2022,
    "total": 611,
    "registers": 7,
-   "generated": "2026-11-20T12:09:42+01:00",
+   "generated": "2026-11-20T18:12:12+01:00",
    "source": "https://ursus.um.warszawa.pl/wykazy-za-rok-2022",
    "file": "wykazy-2022.json"
   },
@@ -38,7 +38,7 @@
    "year": 2023,
    "total": 563,
    "registers": 6,
-   "generated": "2026-11-20T12:09:46+01:00",
+   "generated": "2026-11-20T18:12:16+01:00",
    "source": "https://ursus.um.warszawa.pl/wykazy-za-rok-2023",
    "file": "wykazy-2023.json"
   },
@@ -46,7 +46,7 @@
    "year": 2024,
    "total": 449,
    "registers": 6,
-   "generated": "2026-11-20T12:09:48+01:00",
+   "generated": "2026-11-20T18:12:20+01:00",
    "source": "https://ursus.um.warszawa.pl/-/wykazy-za-rok-2024",
    "file": "wykazy-2024.json"
   },
@@ -54,7 +54,7 @@
    "year": 2025,
    "total": 549,
    "registers": 7,
-   "generated": "2026-11-20T12:09:50+01:00",
+   "generated": "2026-11-20T18:12:22+01:00",
    "source": "https://ursus.um.warszawa.pl/-/wykazy-za-rok-2025",
    "file": "wykazy-2025.json"
   },
@@ -62,7 +62,7 @@
    "year": 2026,
    "total": 470,
    "registers": 8,
-   "generated": "2026-11-20T12:09:53+01:00",
+   "generated": "2026-11-20T18:12:25+01:00",
    "source": "https://ursus.um.warszawa.pl/-/wykazy-za-rok-2026",
    "file": "wykazy-2026.json"
   }
